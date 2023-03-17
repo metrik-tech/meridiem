@@ -4,6 +4,8 @@ Meridiem is a simple, lightweight and fast library written in TypeScript for par
     https://github.com/wanasit/chrono
 ) and this [tweet](https://twitter.com/JohnPhamous/status/1630763699849015298) from @JohnPhamous about the new Vercel date range selector.
 
+Has troubles with very large time ranges. Will work best if kept within 2-3 years of provided `currentDate` or the current date.
+
 Compatible with Node, the browser, Deno and Bun. Only dependency is `date-fns`.
 
 ## Installation

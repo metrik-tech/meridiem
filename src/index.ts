@@ -18,7 +18,7 @@ const parsers: Parser[] = [
       const startDate = new Date(start);
       const endDate = new Date(end);
 
-      if (startDate.getFullYear() < 2023 || endDate.getFullYear() < 2023) {
+      if (startDate.getFullYear() === 2001 || endDate.getFullYear() === 2001) {
         startDate.setFullYear(date.getFullYear());
         endDate.setFullYear(date.getFullYear());
       }
@@ -33,7 +33,7 @@ const parsers: Parser[] = [
       const startDate = new Date(start);
       const endDate = new Date(end);
 
-      if (startDate.getFullYear() < 2023 || endDate.getFullYear() < 2023) {
+      if (startDate.getFullYear() === 2001 || endDate.getFullYear() === 2001) {
         startDate.setFullYear(date.getFullYear());
         endDate.setFullYear(date.getFullYear());
       }
@@ -87,19 +87,19 @@ const parsers: Parser[] = [
     },
   },
   {
-    matcher: /(\d+)\s*(?:months?|m)/,
+    matcher: /(\d+)\s*(?:months?)/,
     parser: (date: Date, value: string) => {
       return { start: subMonths(date, parseInt(value)), end: date };
     },
   },
   {
-    matcher: /(\d+)\s*(?:years?|y)/,
+    matcher: /(\d+)\s*(?:years?|yrs?|y)/,
     parser: (date: Date, value: string) => {
       return { start: subYears(date, parseInt(value)), end: date };
     },
   },
   {
-    matcher: /(\d+)\s*(?:weeks?|w)/,
+    matcher: /(\d+)\s*(?:weeks?|wk?)/,
     parser: (date: Date, value: string) => {
       return { start: subDays(date, parseInt(value) * 7), end: date };
     },

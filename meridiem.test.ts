@@ -184,17 +184,17 @@ describe("relative ranges", () => {
 
   test("days", () => {
     expect(parse("last 5 days", new Date("January 5, 2022"))).toEqual({
-      start: new Date("January 1, 2022"),
+      start: new Date("December 31, 2021"),
       end: new Date("January 5, 2022"),
     });
 
     expect(parse("5d", new Date("January 5, 2022"))).toEqual({
-      start: new Date("January 1, 2022"),
+      start: new Date("December 31, 2021"),
       end: new Date("January 5, 2022"),
     });
 
     expect(parse("last 5 days", new Date("January 5, 2022"))).toEqual({
-      start: new Date("January 1, 2022"),
+      start: new Date("December 31, 2021"),
       end: new Date("January 5, 2022"),
     });
   });

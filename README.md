@@ -42,6 +42,14 @@ const relativeResult = parse("last week", new Date("January 1, 2023"))
 //   end: 2023-01-01T00:00:00.000Z
 // }
 
+// Meridiem can also do real date ranges
+const realResult = parse("1/1 - 1/2")
+
+// {
+//   start: 2023-01-01T00:00:00.000Z,
+//   end: 2023-01-02T00:00:00.000Z
+// }
+
 // If the date range is invalid, null is returned
 const invalidResult = parse("invalid date range") // null
 ```

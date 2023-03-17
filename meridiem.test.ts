@@ -193,7 +193,7 @@ describe("relative ranges", () => {
       end: new Date("January 5, 2022"),
     });
 
-    expect(parse("last 5 days", new Date("January 5, 2022"))).toEqual({
+    expect(parse("5 day", new Date("January 5, 2022"))).toEqual({
       start: new Date("December 31, 2021"),
       end: new Date("January 5, 2022"),
     });

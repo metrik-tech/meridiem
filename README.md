@@ -1,3 +1,6 @@
+# !! ARCHIVED !!
+Use `vercel/ms` instead
+
 # `⏰ meridiem`
 
 Meridiem is a simple, lightweight and fast library written in TypeScript for parsing natural language time ranges (in the past) and converting them to a simple object. Powered by some simple RegEx patterns and the built-in `new Date()` parser. Inspired by [chrono](
